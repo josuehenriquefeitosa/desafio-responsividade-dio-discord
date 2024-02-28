@@ -1,8 +1,8 @@
-:root{
+:root {
     --primary-color: #FFFFFF;
     --secondary-color: #23272A;
-    --terciary-color:  #F6F6F6;
-    font-family:"Open Sans",sans-serif;
+    --terciary-color: #F6F6F6;
+    font-family: "Open Sans", sans-serif;
 }
 
 * {
@@ -14,17 +14,17 @@
     color: var(--secondary-color);
 }
 
-body{
+body {
     padding: 0;
     margin: 0;
 }
 
-.container{
+.container {
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: grid;
-    grid-template-rows: repeat(5,4fr) 1fr; 
-    grid-template-areas: 
+    grid-template-rows: auto repeat(4, 4fr) 1fr;
+    grid-template-areas:
         "header",
         "grupo",
         "voice",
@@ -33,31 +33,34 @@ body{
         "footer";
 }
 
-.header{
-    border: 2px solid green;
-    grid-area:  'header';
+.header {
+    /* border: 2px solid green; */
+    grid-area: 'header';
     background-image: url("../img/Header\ Background.png");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 70px 24px;
-    height: 100vh; /*507px */
-    max-width: 100vw; /*428px*/
+    height: 100vh;
+    /*507px */
+    max-width: 100vw;
+    /*428px*/
     display: grid;
     place-items: center;
     gap: 24px;
-    
+
 }
-.header .texto{
+
+.header .texto {
     width: 100%;
     height: 100%;
     display: grid;
     grid-template-rows: 64px 132px;
     gap: 24px;
-    
-    
+
+
 }
 
-.header .texto h1{
+.header .texto h1 {
     font-family: "Luckiest Guy", cursive;
     font-weight: 400;
     font-size: 32px;
@@ -67,54 +70,243 @@ body{
     line-height: 32px;
     color: var(--primary-color);
 }
-.header .texto p{
+
+.header .texto p {
     color: var(--primary-color);
 }
 
-.header .botoes{
+.header .botoes {
     display: flex;
     flex-direction: column;
     gap: 16px;
     width: 100%;
     height: 122px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 
-.header .botoes button{
+.header .botoes button {
+    font-weight: 400;
+    font-size: 16px;
     height: 54px;
     border-radius: 28px;
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-/* =================SECTION GRUPO======================== */
-.grupo{
-    grid-area:' grupo';
+.header .botoes button:nth-last-of-type(1) {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
-.voice{
+
+
+/* =================SECTION GRUPO================== */
+.grupo {
+    grid-area: ' grupo';
+    display: grid;
+    width: 428px;
+    padding: 40px 24px;
+    gap: 27px;
+}
+
+.grupo .picture {
+    background-image: url(../img/Section\ Image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 379px;
+    height: 252px;
+    /* border: 1px solid green; */
+}
+
+.grupo .details {
+    display: grid;
+    grid-template-rows: 2fr 2fr;
+    gap: 27px;
+    width: 379px;
+    height: 214px;
+    /* border: 1px solid #107ad6; */
+}
+
+.grupo .details h2 {
+    font-weight: 800;
+    font-size: 24px;
+    width: 370px;
+    height: 99px;
+
+}
+
+.grupo .details p {
+    height: 88px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+
+
+/* =================SECTION VOICE================== */
+
+.voice {
     grid-area: 'voice';
+    display: grid;
+    width: 428px;
+    height: 100%;
+    padding: 40px 24px;
+    gap: 27px;
+    background-color: var(--terciary-color);
 }
 
-.coach{
+.voice .picture {
+    background-image: url(../img/Section\ Image\ 2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 379px;
+    height: 252px;
+}
+
+.voice .details {
+    display: grid;
+    grid-template-rows: 33px 88px;
+    gap: 27px;
+    width: 379px;
+    height: 148px;
+
+}
+
+.voice .details h2 {
+    font-weight: 800;
+    font-size: 24px;
+    width: 370px;
+    height: 33px;
+
+}
+
+.voice .details p {
+    height: 88px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+
+/* =================SECTION COACH================== */
+
+.coach {
     grid-area: 'coach';
+    display: grid;
+    width: 428px;
+    height: 100%;
+    padding: 40px 24px;
+    gap: 27px;
+    background-color: var(--primary-color);
 }
 
-.conected{
+.coach .picture {
+    background-image: url(../img/Section\ Image\ 3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 379px;
+    height: 252px;
+}
+
+.coach .details {
+    display: grid;
+    grid-template-rows: 33px 88px;
+    gap: 27px;
+    width: 379px;
+    height: 148px;
+}
+
+.coach .details h2 {
+    font-weight: 800;
+    font-size: 24px;
+    width: 370px;
+    height: 33px;
+}
+
+.coach .details p {
+    height: 88px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+
+/* =================SECTION CONECTED================== */
+.conected {
     grid-area: 'conected';
+    display: grid;
+    width: 428px;
+    height: 100%;
+    padding: 40px 24px;
+    gap: 27px;
+    background-color: var(--terciary-color);
+}
+
+.conected .details {
+    display: grid;
+    grid-template-rows: 74px 110px;
+    gap: 27px;
+    width: 379px;
+    height: 201px;
+
+}
+
+.conected .details h2 {
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-size: 32px;
+    width: 370px;
+    height: 64px;
+
+}
+
+.conected .details p {
+    height: 110px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.conected .picture {
+    background-image: url(../img/Section\ Image\ 4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 379px;
+    height: 252px;
 }
 
 .footer{
     grid-area: 'footer';
+    display:  flex;
+    background-color: var(--secondary-color);
+}
+.footer img{
+    margin: auto;
+    max-width: 162px;
+}
+
+
+/* ================= MEDIA QUERIES ================== */
+@media screen and (max-width:320px){
+    /* .grupo .picture, .voice .picture, .coach .picture, .conected .picture {
+        width: 250px;
+        max-width: 250px;
+        background-size: cover;
+    } */
+    .grupo,.voice,.coach,.conected{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:427px){
+    .header .botoes{
+        border: 1px solid red;
+        width: 90%;
+    }
+    .header .texto p{
+        font-size: 12px;
+    }
+}
+
+
+@media screen and (max-width:1024px){
+
 }
