@@ -284,10 +284,24 @@ body {
 
 
 /* ================= MEDIA QUERIES ================== */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 427px) {
+
+    .header .texto p{
+        font-size: 13.5px;
+    }
+    .header .botoes{
+        width: 70%;
+        align-items: center;
+    }
+    .header .botoes button{
+        padding: 2px;
+        font-size: 12px;
+        width: 80%;
+    }
+
     .grupo,.coach,.conected,.voice{
         max-width: 100vw;
-        border: 1px solid orangered;
+        width: 100%;
     }
 
     .grupo,.coach,.conected,.voice{
@@ -301,7 +315,6 @@ body {
     .grupo .details h2,.coach .details h2,.conected .details h2,.voice .details h2{
         font-size: 1.2rem;
         width: 100%;
-
     }
 
     .grupo .details p,.coach .details p,.conected .details p,.voice .details p{
@@ -314,22 +327,28 @@ body {
         width: 100%;
         height: 160px;
         max-width: 80vw;
-        border: 1px solid green;
-        background-size: cover;
+        background-size: contain;
+        background-position: center;
     }
 }
 
-@media screen and (max-width:427px){
-    .header .botoes{
-        border: 1px solid red;
-        width: 90%;
+
+
+@media screen and (min-width: 428px) and (max-width:767px){
+    .grupo,.coach,.conected,.voice{
+        width: 100vw;
+        place-content: center;
     }
-    .header .texto p{
-        font-size: 12px;
+    .grupo .picture,.coach .picture,.conected .picture,.voice .picture{
+        width: 100%;
+        place-self: center;
+        
+    } 
+    .grupo .details,.coach .details,.conected .details,.voice .details{
+        width: 100%;
     }
+    .grupo .details h2,.coach .details h2,.conected .details h2,.voice .details h2{
+        width: 80%;
+    }
+
 }
-
-/* 
-@media screen and (max-width:1024px){
-
-} */
